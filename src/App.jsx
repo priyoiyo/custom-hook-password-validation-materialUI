@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import FormWithoutUseChecker from './component/FormWithoutUseChecker'
 import theme from './theme'

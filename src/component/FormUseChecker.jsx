@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
@@ -7,13 +7,8 @@ import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Button, Card, CardContent, Typography } from '@mui/material';
-import FormHelperText from '@mui/material/FormHelperText';
-import { styled } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
-import { width } from '@mui/system';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import useChecker from '../hookLibrary/useChecker';
 
@@ -88,12 +83,13 @@ export default function FormUseChecker() {
                                     </IconButton>
                                 </InputAdornment>
                             }
-
                         />
                     </FormControl>
+
                     <div style={{ fontSize: "0.7rem", display: "flex", justifyContent: "flex-end" }}>
                         <span>{password.password1.length} /30</span>
                     </div>
+
                     <FormControl color='secondary' fullWidth variant="outlined">
                         <InputLabel htmlFor="outlined-adornment-password">Confirm Password</InputLabel>
                         <OutlinedInput
@@ -114,14 +110,13 @@ export default function FormUseChecker() {
                                     </IconButton>
                                 </InputAdornment>
                             }
-
                         />
                     </FormControl>
+
                     <Box style={{ fontSize: "0.7rem", display: "flex", justifyContent: "flex-end" }}>
                         <span>{password.password2.length} /30</span>
                     </Box>
                     {password.password1 && <Box sx={{ width: '100%', fontSize: "0.8rem" }}>
-
                         <Box sx={{ display: "flex", justifyContent: "space-between", fontWeight: "bold" }} >
                             <span>Password Strength</span>
                             {passwordChecker.emoticon}
@@ -132,7 +127,9 @@ export default function FormUseChecker() {
                         <span>{passwordMatch}</span>
                     </Box>
                     }
+
                     <Button sx={{ margin: "auto", marginTop: "10px", color: "white" }} color="secondary" variant="contained" >Submit</Button>
+                
                 </CardContent>
             </Card>
         </>

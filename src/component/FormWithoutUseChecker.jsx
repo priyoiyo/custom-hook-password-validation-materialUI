@@ -93,8 +93,6 @@ export default function FormWithoutUseChecker() {
         } else {
             setPasswordMatch(<></>)
         }
-
-
     }, [password])
 
     return (
@@ -102,7 +100,6 @@ export default function FormWithoutUseChecker() {
             <Typography sx={{ textAlign: "center" }} gutterBottom variant="h4" component="h4">
                 Form without useChecker
             </Typography>
-
             <Card variant='outlined' sx={{ maxWidth: "450px", margin: "auto" }}>
                 <CardContent sx={{ display: "flex", flexDirection: "column" }}>
 
@@ -126,7 +123,7 @@ export default function FormWithoutUseChecker() {
                             <br />
                             <span>- Password must contain symbol</span>
                         </Box>}
-
+                        
                     <FormControl color='secondary' fullWidth variant="outlined">
                         <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                         <OutlinedInput
@@ -153,9 +150,9 @@ export default function FormWithoutUseChecker() {
                                     </IconButton>
                                 </InputAdornment>
                             }
-
                         />
                     </FormControl>
+
                     <div style={{ fontSize: "0.7rem", display: "flex", justifyContent: "flex-end" }}>
                         <span>{password.password1.length} /30</span>
                     </div>
@@ -179,9 +176,9 @@ export default function FormWithoutUseChecker() {
                                     </IconButton>
                                 </InputAdornment>
                             }
-
                         />
                     </FormControl>
+
                     <Box style={{ fontSize: "0.7rem", display: "flex", justifyContent: "flex-end" }}>
                         <span>{password.password2.length} /30</span>
                     </Box>
@@ -197,6 +194,7 @@ export default function FormWithoutUseChecker() {
                         <span>{passwordMatch}</span>
                     </Box>
                     }
+                    
                     <Button sx={{ margin: "auto", marginTop: "10px", color: "white" }} color="secondary" variant="contained" >Submit</Button>
                 </CardContent>
             </Card>
